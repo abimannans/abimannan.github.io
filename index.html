@@ -43,7 +43,7 @@
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 
     }
-   img  {
+    img  {
 		border-radius:50%;
     }
      button
@@ -52,6 +52,10 @@
 	color:#FFFFFF;
 	font-size:10px;
 	}
+     #map {
+        height: 150px;
+        width: 100%;
+       }
 
     </style>
 
@@ -174,8 +178,30 @@
 			 <b>Exploratary Data Analysis</b> by <b><i>John Hopkin's University</i></b> <a href="expanalysis.pdf" target="_blank" title="To view certificate">  <button type="button" >Certificate</button></a><br>
 			 <b>Mining Massive Datasets</b> by <b><i>Stanford University</i></b> <a href="mmds.pdf" target="_blank" title="To view certificate">  <button type="button" >Certificate</button></a> <br> 
 			 <b>Design and Analysis of Algorithms</b> by <b><i>Stanford University</i></b>  <a href="Algo.pdf" target="_blank" title="To view certificate"> <button type="button" >Certificate</button></a> </p>
+		<div class="col-lg-6 col-xs-" style="padding-right:0px;">
+
+             <h4>My Home Location</h4>
+    		<div id="map"></div>
+    		<script>
+     		 function initMap() {
+       		 var uluru = {lat: 11.4804187, lng: 77.4892677};
+       		 var map = new google.maps.Map(document.getElementById('map'), {
+         	 zoom: 4,
+         	 center: uluru
+        	});
+       		 var marker = new google.maps.Marker({
+         	 position: uluru,
+         	 map: map
+       		 });
+     		 }
+   		 </script>
+     		<script async defer
+    		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGQpjfhjfqB0yGn9oSFVNviJ5zAlfFQoo&callback=initMap">
+    		</script>
+	</div>
 
             </div>
+		  
 </div>
 
 <script src="js/jquery.js"></script>
